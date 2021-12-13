@@ -10,7 +10,7 @@
 
         //rules is a function that contains the rules of the game and determines who wins the round
         function rules(comp, guest) {
-            switch(comp, guest) {
+            switch(true) {
                 case (computerPlay==("Rock") && playerChoice==("scissors")):
                     alert("You Lose Rock beats Scissors");
                     break;
@@ -38,6 +38,8 @@
                 case (computerPlay==("Scissors") && playerChoice==("scissors")):
                     alert("It's a Draw");
                     break;
-
-            }    
+                default:
+                    alert("Invalid input");
+            }
+        }    
         rules(computerPlay, playerChoice);
