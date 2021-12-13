@@ -1,4 +1,4 @@
-        //computerChoice is a array with 3 elements 
+        //computerChoice is an array with 3 elements 
         const computerChoice=["Rock", "Paper", "Scissors"];
         //computerPlay variable Contains  a function that chooses randomly an element from the computerChoice array
         let computerPlay= computerChoice[Math.floor(Math.random()*computerChoice.length)];
@@ -8,21 +8,36 @@
         let player= playerChoice.toLowerCase();
         console.log(player);
 
-        //rules is a function that contains the rules of the game
+        //rules is a function that contains the rules of the game and determines who wins the round
         function rules(comp, guest) {
-            // The if  statement contains the rules  when computer wins 
-            if ((computerPlay==("Rock") &&  player==("scissors")) ||
-            (computerPlay==("Paper") && player==("rock")) ||
-            (computerPlay==("Scissors") && player==("paper"))) {
-                 alert("Computer Won");     
-            }  
-            // The else if statement contains the rules when player wins 
-            else if ((computerPlay==("Scissors") &&  player==("rock")) ||
-            (computerPlay==("Rock") && player==("paper")) ||
-            (computerPlay==("Paper") && player==("scissors"))) {
-                 alert("You Won"); 
-            } else {
-                alert("It's a draw")
-            }
-        }   
+            switch(comp, guest) {
+                case (computerPlay==("Rock") && playerChoice==("scissors")):
+                    alert("You Lose Rock beats Scissors");
+                    break;
+                case (computerPlay==("Scissors") && playerChoice==("paper")):
+                    alert("You Lose Scissors beats Paper");
+                    break;
+                case (computerPlay==("Paper") && playerChoice==("rock")):
+                    alert("You Lose Paper beats Rock");
+                    break;
+                case (computerPlay==("Scissors") && playerChoice==("rock")):
+                    alert("You Win Rock beats Scissors");
+                    break;
+                case (computerPlay==("Paper") && playerChoice==("scissors")):
+                    alert("You Win Scissors beats Paper");
+                    break;
+                case (computerPlay==("Rock") && playerChoice==("paper")):
+                    alert("You Win Paper beats Rock");
+                    break;
+                case (computerPlay==("Rock") && playerChoice==("rock")):
+                    alert("It's Draw ");
+                    break;
+                case (computerPlay==("Paper") && playerChoice==("paper")):
+                    alert("It's a Draw");
+                    break;
+                case (computerPlay==("Scissors") && playerChoice==("scissors")):
+                    alert("It's a Draw");
+                    break;
+
+            }    
         rules(computerPlay, playerChoice);
