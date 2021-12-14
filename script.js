@@ -7,7 +7,6 @@
         and in the computerPlay variable is a function that makes a random choice from the computerChoice array. */
         function rules() {
             let computerPlay= computerChoice[Math.floor(Math.random()*computerChoice.length)];
-            console.log(computerPlay);
             const playerChoice= prompt("Choose rock, paper, sccisors:", "");
             let player= playerChoice.toLowerCase();
             //switch statemnet  contains the rules of the game and determines who wins the round, also it adds 1 score to the winner.
