@@ -1,18 +1,15 @@
         //computerChoice is an array with 3 elements 
         const computerChoice=["Rock", "Paper", "Scissors"];
-
         let playerScore= 0;
         let computerScore= 0;
 
-        //rules is a function that contains the rules of the game and determines who wins the round
+        /* function rules contains the rules of the game in the switch statement, 
+        and in the computerPlay variable is a function that makes a random choice from the computerChoice array. */
         function rules() {
-
-            //computerPlay variable Contains  a function that chooses randomly an element from the computerChoice array
             let computerPlay= computerChoice[Math.floor(Math.random()*computerChoice.length)];
-
             const playerChoice= prompt("Choose rock, paper, sccisors:", "");
             let player= playerChoice.toLowerCase();
-
+            //switch statemnet  contains the rules of the game and determines who wins the round, also it adds 1 score to the winner.
             switch(true) {
                 case (computerPlay==("Rock") && player==("scissors")):
                     alert("You Lose Rock beats Scissors");
@@ -45,11 +42,18 @@
                     alert("Invalid input");
             }
         }
-        
-        for ((computerScore=0) || (playerScore=0); (computerScore<=5) || (playerScore<=5) ; (computerScore++) || (playerScore++)) {
+        let score =( computerScore+playerScore);
+        for (score=0; score<=5; score++) {
             rules();
+            alert("Player: "+playerScore);
+            alert("Computer : "+computerScore)
         }
-        console.log(computerScore, playerScore);
+        if (playerScore>computerScore) {
+            alert("You Won the Game");
+        }
+        else {
+            alert("Computer Won Try Again")
+        }
         
 
 
