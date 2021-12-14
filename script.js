@@ -37,6 +37,8 @@
                     break;
                 case (computerPlay.toLowerCase()===player):
                     alert("Draw ");
+                    playerScore++;
+                    computerScore++;
                     break;
                 default:
                     alert("Invalid input");
