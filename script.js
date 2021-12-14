@@ -54,7 +54,7 @@
         if (playerScore>computerScore) {
             alert("You Won the Game");
         }
-        else(computerScore>playerScore) {
+        else if (computerScore>playerScore){
             alert("Computer Won Try Again");
         }
         
