@@ -1,4 +1,3 @@
-        //computerChoice is an array with 3 elements 
         const computerChoice=["Rock", "Paper", "Scissors"];
         let playerScore= 0;
         let computerScore= 0;
@@ -46,7 +45,7 @@
         }
         //for is a loop function that makes the game play until player or computer reaches 5 scores
         let score =(computerScore || playerScore);
-        for (score=0; score<=5; score++) {
+        for (score=0; score<5; score++) {
             rules();
             alert("Player: "+playerScore);
             alert("Computer : "+computerScore);
