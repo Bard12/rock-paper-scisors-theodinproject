@@ -19,7 +19,7 @@
                     computerScore++;
                     break;
                 case (computerPlay==("Paper") && player==("rock")):
-                    alert("You Lose Paper beats Rock");
+                    //alert("You Lose Paper beats Rock");
                     computerScore++;
                     break;
                 case (computerPlay==("Scissors") && player==("rock")):
@@ -40,7 +40,7 @@
                     computerScore++;
                     break;
                 default:
-                    alert("Invalid input");
+                    //alert("Invalid input");
             }
         }
         //for is a loop function that makes the game play until player or computer reaches 5 scores
